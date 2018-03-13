@@ -1,14 +1,192 @@
 html {
-    background-color: gray;
+    background-image: url(../media/hexes.png), linear-gradient(to right, #333, #555, #bbb 190%);
+    background-repeat: repeat, no-repeat;
+    background-position: top, left;
+    width: 100%;
+    height: 100%;
+    background-blend-mode: exclusion;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
 div {
-    margin: auto;
-    margin-top: 100px;
-    width: 50%;
-    height: 30%;
     text-align: center;
-    background-color: lightgray;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #aaa;
+    background-color: #bbb;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
+}
+.top-bar {
+        z-index: -2;
+        background-color: #666;
+        position: absolute;
+        height: 7%;
+        width: 100vw;
+        top: 0;
+        right: 0;
+        border-bottom-color: #555;
+        border-bottom-style: inset;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+        border-bottom-width: 2px;
+    }
+.nav {
+        position: absolute;
+        height: 0%;
+        width: 80%;
+        top: 0;
+        left: 10%;
+    }
+.nav-end {
+        position: absolute;
+        height: 10%;
+        width: 80%;
+        top: 0;
+        left: 10%;
+        -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+    .shadow {
+        background: rgba(0, 0, 0, 1);
+        z-index: -1;
+        position: absolute;
+        height: 10.3%;
+        width: 80.4%;
+        top: 0;
+        right: 9.8%;
+        filter: blur(70px);
+        -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+.content {
+        z-index: -3;
+        position: absolute;
+        right: 5%;
+        top: 7%;
+        width: 90%;
+        height: auto;
+        transition: right 2s;
+        transition-timing-function: ease-out;
+    }
+p {
+    margin: 24px;
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    html {
+        overflow: hidden;
+    }
+    .top-bar {
+        z-index: -2;
+        background-color: #666;
+        position: absolute;
+        height: 7%;
+        width: 100vw;
+        top: 0;
+        right: 0;
+        border-bottom-color: #555;
+        border-bottom-style: inset;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+        border-bottom-width: 2px;
+    }
+    .nav {
+        position: absolute;
+        height: 0%;
+        width: 20%;
+        top: 0;
+        left: 0;
+    }
+    .nav-end {
+        position: absolute;
+        height: 10%;
+        width: 20%;
+        top: 0;
+        left: 0;
+        -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+    .shadow {
+        background: rgba(0, 0, 0, .8);
+        z-index: -1;
+        position: absolute;
+        height: 10.4%;
+        width: 20.4%;
+        top: 0;
+        left: -.2%;
+        filter: blur(70px);
+        -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+    .content {
+        z-index: -3;
+        position: absolute;
+        right: 1vw;
+        top: 7%;
+        width: 99vw;
+        height: 92vh;
+        transition: right 2s;
+        transition-timing-function: ease-out;
+    }
+}
+@media screen and (min-width: 768px) {
+    html {
+        overflow: hidden;
+    }
+    .top-bar {
+        z-index: -2;
+        background-color: #666;
+        position: absolute;
+        height: 7%;
+        width: 100vw;
+        top: 0;
+        right: 0;
+        border-bottom-color: #555;
+        border-bottom-style: inset;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+        border-bottom-width: 2px;
+    }
+    .nav {
+        position: absolute;
+        height: 80%;
+        width: 15%;
+        top: 0;
+        left: 5%;
+    }
+
+    .nav-end {
+        position: absolute;
+        height: 10%;
+        width: 15%;
+        top: 80%;
+        left: 5%;
+        -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+    .shadow {
+        background: rgba(0, 0, 0, .8);
+        z-index: -1;
+        position: absolute;
+        height: 10.4%;
+        width: 15.4%;
+        top: 80%;
+        left: 4.8%;
+        filter: blur(70px);
+        -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+
+    .content {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        width: 70vw;
+        height: 70vh;
+        transition: right 2s;
+        transition-timing-function: ease-out;
+    }
+    .content:hover {
+        right: -70vw;
+    }
 }
