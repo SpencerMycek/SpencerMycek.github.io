@@ -43,6 +43,27 @@ div {
     width: 80%;
     top: 0;
     left: 10%;
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 4%;
+}
+button {
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: none;
+    height: 10vh;
+    width: 100%;
+    
+}
+
+button>p {
+    padding: 0;
+}
+
+.ast {
+    height: 10px;
+    width: 10px;
 }
 
 .nav-end {
