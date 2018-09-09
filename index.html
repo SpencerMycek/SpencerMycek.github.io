@@ -12,22 +12,27 @@
         $(document).ready(function() {
             $("img#zen").click(function() {
                 if (!flip) {
+                    
+                    $(this).animate({left: "10.5vw"}, "linear");
                     $(this).css("transform", "rotate(90deg)");
-                    $(this).css("left", "10.5vw");
-                    $("div.cover-2").css("left","14vw");
-                    $("div.menu").css("left", "2vw");
-                    $("div.options").css("left", "18vw");
-                    $("div.content").css("left", "19vw");
-                    $("div.photo-cover").css("left", "85.9vw")
+                    $("div.cover-2").animate({left: "14vw"}, "linear");
+                    $("div.menu").animate({left: "2vw"}, "linear");
+                    $("div.options").animate({left: "18vw"}, "linear")
+                    $("div.content").animate({left: "19vw"}, "linear");
+                    $("div.photo-cover").animate({left: "85.9vw"}, "linear");
+                    
+                    
                     flip = true;
                 } else {
+                   
+                    $(this).animate({left: "-.5vw"}, "linear");
                     $(this).css("transform", "rotate(0deg)");
-                    $(this).css("left", "-.5vw");
-                    $("div.cover-2").css("left","3vw");
-                    $("div.menu").css("left", "-9vw");
-                    $("div.options").css("left", "7vw");
-                    $("div.content").css("left", "8vw");
-                    $("div.photo-cover").css("left", "74.9vw")
+                    $("div.cover-2").animate({left: "3vw"}, "linear");
+                    $("div.menu").animate({left: "-9vw"}, "linear");
+                    $("div.options").animate({left: "7vw"}, "linear")
+                    $("div.content").animate({left: "8vw"}, "linear");
+                    $("div.photo-cover").animate({left: "74.9vw"}, "linear");
+                    
                     flip = false;
                     flip2 = false;
                 }
@@ -38,14 +43,18 @@
         $(document).ready(function() {
             $("button#projects").click(function() {
                 if (!flip2) {
+                    
                     $("img#zen").css("transform", "rotate(180deg)");
-                    $("div.content").css("left", "30vw");
-                    $("div.photo-cover").css("left", "96.9vw")
+                    $("div.content").animate({left: "30vw"}, "linear");
+                    $("div.photo-cover").animate({left: "96.9vw"}, "linear");
+                    
                     flip2 = true;
                 } else {
+                    
                     $("img#zen").css("transform", "rotate(90deg)");
-                    $("div.content").css("left", "19vw");
-                    $("div.photo-cover").css("left", "85.9vw")
+                    $("div.content").animate({left: "19vw"}, "linear");
+                    $("div.photo-cover").animate({left: "85.9vw"}, "linear")
+                    
                     flip2 = false;
                 }
             });
