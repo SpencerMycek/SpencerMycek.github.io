@@ -14,6 +14,7 @@
                 if (!flip) {
                     $(this).css("transform", "rotate(90deg)");
                     $(this).css("left", "10.5vw");
+                    $("div.cover-2").css("left","14vw");
                     $("div.menu").css("left", "2vw");
                     $("div.options").css("left", "18vw");
                     $("div.content").css("left", "19vw");
@@ -22,6 +23,7 @@
                 } else {
                     $(this).css("transform", "rotate(0deg)");
                     $(this).css("left", "-.5vw");
+                    $("div.cover-2").css("left","3vw");
                     $("div.menu").css("left", "-9vw");
                     $("div.options").css("left", "7vw");
                     $("div.content").css("left", "8vw");
@@ -60,16 +62,17 @@
         <div class="options"></div>
     </div>
     <div class="main">
-        <div class="cover"></div>
+        <div class="cover-1"></div>
+        <div class="cover-2"></div>
         <div class="nav-button">
             <img id="zen" src="assets/media/website_zen.png" />
         </div>
         <div class="content">
         </div>
         <div class="photo">
-            <div class="photo-cover"></div>
             <img src="assets/media/website_zen.png" />
         </div>
+        <div class="photo-cover"></div>
     </div>
 </body>
 
