@@ -8,9 +8,16 @@ body {
 html {
     background-color: #6a6a6a;
     overflow-x: hidden;
+    font-family: Papyrus, fantasy; 
+    //font-family: 'Lato', sans-serif;
+    //font-family: 'Open Sans', sans-serif;
 }
 
 body {}
+
+h1 {
+    margin: 0;
+}
 
 div {
     margin: 0px;
@@ -31,28 +38,54 @@ div {
     position: fixed;
     top: 0;
     left: -9vw;
-    background-image: linear-gradient(#117711,#336600 50%);
+    background-image: linear-gradient(#117711, #336600 70%);
     width: 12vw;
     height: 100vh;
-    //transition: left .75s;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#projects {
+.home,
+.projects,
+.resume,
+.links,
+.todo {
+    font-family: Papyrus, fantasy;
+    font-size: .9vw;
+    background: #F4F4F1;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
     position: relative;
-    left: 2vw;
-    width: 8vw;
-    height: 5vh;
+    left: 2.5vw;
+    width: 7vw;
     border: none;
+    border-radius: 50%;
+    border: 1px solid #555555;
+    height: 6vw;
+    box-shadow: 0px 0px 3px 5px rgba(0,0,0, .1);
 }
+
+.home {}
+
+.projects {}
+
+.resume {}
+
+.links {}
 
 .options {
     position: fixed;
     top: 0;
     left: 7vw;
-    background-image: linear-gradient(#117711,#336600 50%);
+    background-image: linear-gradient(#117711, #336600 70%);
     width: 12vw;
     height: 100vh;
-    //transition: left .75s;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .main {}
@@ -64,6 +97,9 @@ div {
     width: 2vw;
     height: 100vh;
     box-shadow: 0px 0px 5px 7px rgba(0, 0, 255, .1);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #555555;
 }
 
 .cover-2 {
@@ -73,16 +109,15 @@ div {
     left: 3vw;
     width: 4vw;
     height: 100vh;
-    box-shadow: 0px 0px 5px 7px rgba(0, 0, 255, .1); 
-    //transition: left .75s;
+    box-shadow: 0px 0px 5px 7px rgba(0, 0, 255, .1);
+    border-left: 1px solid #555555;
+    border-right: 1px solid #555555;
 }
 
 .nav-button {
     z-index: 7;
     position: fixed;
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .4));
-    //transition: left .75s;
-
 }
 
 #zen {
@@ -105,11 +140,11 @@ div {
     width: 67vw;
     height: auto;
     min-height: 100vh;
-    //transition: left .75s;
     padding-top: 2vh;
     padding-left: 2vw;
     padding-right: 2vw;
     box-shadow: -7px 0px 5px .25px rgba(0, 0, 255, .1);
+    border-left: 1px solid #555555;
 }
 
 .photo {
@@ -130,7 +165,7 @@ div {
     left: 74.9vw;
     width: 25vw;
     height: 100vh;
+    -webkit-clip-path: polygon(1% 0, 0 0, 0 100%, 14% 100%);
     clip-path: polygon(1% 0, 0 0, 0 100%, 14% 100%);
     background: #F4F4F1;
-    //transition: left .75s;
 }

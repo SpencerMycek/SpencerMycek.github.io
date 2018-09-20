@@ -3,18 +3,21 @@
 
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet"> 
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/home.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="">
     <title>Home</title>
     <script src="jquery-3.3.1.js"></script>
     <script>
         var flip = false;
         $(document).ready(function() {
-            $("img#zen").click(function() {
+            $("div.cover-2, img#zen").click(function() {
+                $("img#zen, div.cover-2, div.menu, div.options, div.content, div.photo-cover").clearQueue();
                 if (!flip) {
                     
-                    $(this).animate({left: "10.5vw"}, "linear");
-                    $(this).css("transform", "rotate(90deg)");
+                    $("img#zen").animate({left: "10.5vw"}, "linear");
+                    $("img#zen").css("transform", "rotate(90deg)");
                     $("div.cover-2").animate({left: "14vw"}, "linear");
                     $("div.menu").animate({left: "2vw"}, "linear");
                     $("div.options").animate({left: "18vw"}, "linear")
@@ -25,8 +28,8 @@
                     flip = true;
                 } else {
                    
-                    $(this).animate({left: "-.5vw"}, "linear");
-                    $(this).css("transform", "rotate(0deg)");
+                    $("img#zen").animate({left: "-.5vw"}, "linear");
+                    $("img#zen").css("transform", "rotate(0deg)");
                     $("div.cover-2").animate({left: "3vw"}, "linear");
                     $("div.menu").animate({left: "-9vw"}, "linear");
                     $("div.options").animate({left: "7vw"}, "linear")
@@ -41,7 +44,8 @@
 
         var flip2 = false;
         $(document).ready(function() {
-            $("button#projects").click(function() {
+            $("button.projects").click(function() {
+                $("img#zen, div.cover-2, div.menu, div.options, div.content, div.photo-cover").clearQueue();
                 if (!flip2) {
                     
                     $("img#zen").css("transform", "rotate(180deg)");
@@ -59,16 +63,30 @@
                 }
             });
         });
-
+    </script>
+    <script>
+        $(document).ready(function(){
+           $("div.cover-2, img#zen").hover(
+               function(){
+                $("div.cover-2, img#zen").css("filter","brightness(.94)");
+           },  function(){
+                $("div.cover-2, img#zen").css("filter","brightness(1)");
+           }); 
+        });
     </script>
 </head>
 
 <body>
     <div class="nav">
         <div class="menu">
-            <button id="projects">Projects</button>
+            <button class="home">Home</button>
+            <button class="projects">Projects</button>
+            <button class="resume">Resume</button>
+            <button class="links">Contact Me</button>
         </div>
-        <div class="options"></div>
+        <div class="options">
+            <button class="todo">To-Do</button>
+        </div>
     </div>
     <div class="main">
         <div class="cover-1"></div>
@@ -77,9 +95,10 @@
             <img id="zen" src="assets/media/website_zen.png" />
         </div>
         <div class="content">
+            <h1>About Me</h1>
         </div>
         <div class="photo">
-            <img src="assets/media/website_zen.png" />
+            <img class="back-photo" src="assets/media/website_zen.png" />
         </div>
         <div class="photo-cover"></div>
     </div>
