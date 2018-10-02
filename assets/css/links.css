@@ -1,0 +1,49 @@
+.back-photo {
+    position: relative;
+    right: 30vw;
+}
+
+#linkedin, #github {
+    overflow: hidden;
+    display: block;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0, .4);
+}
+
+#li, #gh {
+    height: 3em;
+    width: 3em;
+}
+
+.linked {
+    display: flex;
+    padding-top: .6em;
+    padding-bottom: .6em;
+    width: 60%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+p {
+    margin-top: .8em;
+    margin-bottom: auto;
+    margin-left: .7em;
+}
+
+h1 {
+    margin-top: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .linked {
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .linked {
+        width: 28%%;
+    }
+}
