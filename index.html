@@ -8,84 +8,20 @@
     <link href="./assets/css/home.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="">
     <title>Home</title>
-    <script src="jquery-3.3.1.js"></script>
-    <script>
-        var flip = false;
-        $(document).ready(function() {
-            $("div.cover-2, img#zen").click(function() {
-                $("img#zen, div.cover-2, div.menu, div.options, div.content, div.photo-cover").clearQueue();
-                if (!flip) {
-                    
-                    $("img#zen").animate({left: "10.5vw"}, "linear");
-                    $("img#zen").css("transform", "rotate(90deg)");
-                    $("div.cover-2").animate({left: "14vw"}, "linear");
-                    $("div.menu").animate({left: "2vw"}, "linear");
-                    $("div.options").animate({left: "18vw"}, "linear")
-                    $("div.content").animate({left: "19vw"}, "linear");
-                    $("div.photo-cover").animate({left: "85.9vw"}, "linear");
-                    
-                    
-                    flip = true;
-                } else {
-                   
-                    $("img#zen").animate({left: "-.5vw"}, "linear");
-                    $("img#zen").css("transform", "rotate(0deg)");
-                    $("div.cover-2").animate({left: "3vw"}, "linear");
-                    $("div.menu").animate({left: "-9vw"}, "linear");
-                    $("div.options").animate({left: "7vw"}, "linear")
-                    $("div.content").animate({left: "8vw"}, "linear");
-                    $("div.photo-cover").animate({left: "74.9vw"}, "linear");
-                    
-                    flip = false;
-                    flip2 = false;
-                }
-            });
-        });
-
-        var flip2 = false;
-        $(document).ready(function() {
-            $("button.projects").click(function() {
-                $("img#zen, div.cover-2, div.menu, div.options, div.content, div.photo-cover").clearQueue();
-                if (!flip2) {
-                    
-                    $("img#zen").css("transform", "rotate(180deg)");
-                    $("div.content").animate({left: "30vw"}, "linear");
-                    $("div.photo-cover").animate({left: "96.9vw"}, "linear");
-                    
-                    flip2 = true;
-                } else {
-                    
-                    $("img#zen").css("transform", "rotate(90deg)");
-                    $("div.content").animate({left: "19vw"}, "linear");
-                    $("div.photo-cover").animate({left: "85.9vw"}, "linear")
-                    
-                    flip2 = false;
-                }
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-           $("div.cover-2, img#zen").hover(
-               function(){
-                $("div.cover-2, img#zen").css("filter","brightness(.94)");
-           },  function(){
-                $("div.cover-2, img#zen").css("filter","brightness(1)");
-           }); 
-        });
-    </script>
+    <script src="assets/scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/script.js"></script>
 </head>
 
 <body>
     <div class="nav">
         <div class="menu">
-            <button class="home">Home</button>
-            <button class="projects">Projects</button>
-            <button class="resume">Resume</button>
-            <button class="links">Contact Me</button>
+            <a id="current" class="home">Home</a>
+            <a class="projects" href="#">Projects</a>
+            <a class="resume" target="_blank" href="./assets/files/Resume_SpencerMycek.pdf">Resume</a>
+            <a class="links" href="links.html">Links</a>
         </div>
         <div class="options">
-            <button class="todo">To-Do</button>
+            <a class="todo" href="todo.html">To-Do</a>
         </div>
     </div>
     <div class="main">
@@ -96,6 +32,7 @@
         </div>
         <div class="content">
             <h1>About Me</h1>
+            <p></p>
         </div>
         <div class="photo">
             <img class="back-photo" src="assets/media/website_zen.png" />
